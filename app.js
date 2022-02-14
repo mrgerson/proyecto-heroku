@@ -18,12 +18,17 @@ mongoose.connect(uri, options).then(
   err => { err }
 ); */
 
+
+//mongoose.connect('mongodb://localhost:27017/udemy');
 try {
-  mongoose.connect('mongodb://localhost:27017/udemy');
+  mongoose.connect('mongodb+srv://dbgerson:HqDzTo8yXatg6CVi@udemy.51tgy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
   console.log('conectado a mongodb')
 } catch (error) {
   handleError(error);
 }
+
+//conexión en la nube
+//mongoose.connect('mongodb+srv://dbgerson:HqDzTo8yXatg6CVi@udemy.51tgy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
 // Middleware
 app.use(morgan('tiny'));
